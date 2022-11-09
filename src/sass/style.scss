@@ -1,0 +1,14 @@
+@import 'normalize';
+
+@import 'scafolding';
+
+body {
+  padding: 0;
+}
+.App {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: azure;
+}
+
