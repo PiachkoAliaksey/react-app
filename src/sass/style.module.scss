@@ -5,10 +5,14 @@
 body {
   padding: 0;
 }
-.App {
+
+.mainWrapper {
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: azure;
+//background-color: azure;
+}
+.text{
+  text-decoration: underline;
 }
 
