@@ -27,7 +27,7 @@ function setDMode() {
 const config = {
   mode: setDMode(),
   devtool: setDevTool(),
-  entry:  './src/index.tsx',
+  entry: './src/index.tsx',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -64,7 +64,7 @@ const config = {
           loader: 'babel-loader',
           options: {
             presets: ["@babel/env", "@babel/preset-react", "@babel/preset-typescript"],
-            plugins: ["@babel/plugin-proposal-class-properties"]
+            plugins: ["@babel/plugin-proposal-class-properties","@babel/transform-runtime"]
           }
         }
       },
