@@ -1,0 +1,38 @@
+@import 'normalize';
+
+@import 'scafolding';
+
+body {
+  padding: 0;
+}
+
+.mainWrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+//background-color: azure;
+}
+
+
+.listOfElements {
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: blanchedalmond;
+}
+
+.elementOfList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin:0 5px;
+  padding: 5px;
+}
+.imgOfElement {
+width: 30%;
+}
+
