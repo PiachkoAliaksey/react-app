@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 interface IListOFPeople{
   list:{
@@ -15,10 +16,10 @@ const ListOfPeople:React.FC<IListOFPeople> = (props:IListOFPeople) => {
     <>
     <ul className='listOfElements'>
       {props.list.map((element:{id:string,name:string,img:string})=> <li key ={element.id} className='elementOfList'>
-        <a className='linkOfElementList' href=''>
+        <Link className='linkOfElementList' to = {`/people/${element.id}`}>
           <img className='imgOfElement' src = {element.img} alt = {element.name}/>
           <p>{element.name}</p>
-          </a>
+          </Link>
         </li>)}
     </ul>
     </>
