@@ -1,0 +1,36 @@
+.btn-handler-page {
+  width: 90px;
+  padding: 5px 10px;
+  list-style: none;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.4s;
+}
+
+.dark {
+  border: 2px solid #ED2939;
+  color:#ED2939;
+  }
+
+ .dark:hover:enabled {
+   background-color: #021631;
+   color:white;
+ }
+
+ .light {
+  border: 2px solid greenyellow;
+  color: greenyellow;
+}
+
+.light:hover:enabled {
+  background-color: green;
+  color:white;
+}
+
+.btn-handler-page:disabled{
+  color:darkgray;
+  background-color: rgba(169,169,169,0.5);
+  border: 2px solid darkgray;
+}
