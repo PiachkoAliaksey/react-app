@@ -4,7 +4,7 @@
  * @param {String} url - url for request
  * @returns {Promise} - Promise with result of request
  */
-const getApiRes = async (url: string) => {
+export const getApiRes = async (url: string) => {
 
   try {
     const response = await fetch(url);
@@ -20,4 +20,10 @@ const getApiRes = async (url: string) => {
   };
 }
 
-export default getApiRes;
+export const  getCurrentRequest = async(arrUrls:string[]) => {
+  const response = await Promise.all(arrUrls.map(res => {
+    return fetch(res).then(res => res.json());
+
+  }))
+  return response;
+}
