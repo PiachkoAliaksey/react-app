@@ -2,11 +2,11 @@ import React, { Component, useEffect, useState } from 'react';
 
 import ListOfPeople from '../components/ListOfPeople';
 import { withErrorApi } from '../hoc-helpers/withErrorApi';
-import getApiRes from '../utils/network';
+import { getApiRes } from '../utils/network';
 import { getIdOfPeople, getPeopleImg } from '../utils/getId';
-import {rootPeople} from '../constants/api';
-import { useQueryParam } from '../hooks/useQueryParam';
+import { rootPeople } from '../constants/api';
 import BtnPagination from '../components/BtnPagination';
+import UiLoading from '../components/UI/UiLoading/UiLoading';
 
 interface IElementOfObject {
   name: string
@@ -22,7 +22,7 @@ const PeoplePage: React.FC<IView> = ({ setErrorApi }) => {
   const [numberPage, setNumberPage] = useState(1);
   const [prevPage, setPrevPage] = useState('');
   const [nextPage, setNextPage] = useState('');
-  const [isLoading,setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const getResource = async (url: string) => {
     setLoading(true);
@@ -58,8 +58,8 @@ const PeoplePage: React.FC<IView> = ({ setErrorApi }) => {
 
   return (
     <>
-      <BtnPagination setCurrentPagePrev={() => setHandleCurrentPageBack()} setCurrentPageNext = {() => setHandleCurrentPage()} numberOfPage = {numberPage} prevPage ={prevPage} nextPage = {nextPage} />
-      {isLoading?(<div className='block-load-data'><img className='loading-gif' /></div>):<ListOfPeople list={element} />}
+      <BtnPagination setCurrentPagePrev={() => setHandleCurrentPageBack()} setCurrentPageNext={() => setHandleCurrentPage()} numberOfPage={numberPage} prevPage={prevPage} nextPage={nextPage} />
+      {isLoading ? (<UiLoading />) : <ListOfPeople list={element} />}
     </>
 
   )
