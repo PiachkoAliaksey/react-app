@@ -1,21 +1,25 @@
-import { ADD_PERSON_TO_FAVORITE,REMOVE_PERSON_FROM_FAVORITE } from "../constant/actionTypes"
+import { AnyAction } from 'redux';
+import { omit } from 'lodash';
 
-const initialState = 'hello';
+import { ADD_PERSON_TO_FAVORITE, REMOVE_PERSON_FROM_FAVORITE } from '../constant/actionTypes';
+import { getLocalStorage } from '../../utils/localStorage';
 
-const favoriteReducer = (state:{}=initialState,action:{type:string,payload:{}}) => {
+interface IActionType {
+  type:string,
+  payload:{}
+}
+
+const initialState = getLocalStorage('store');
+
+const favoriteReducer = (state = initialState, action:AnyAction) => {
   switch (action.type) {
     case ADD_PERSON_TO_FAVORITE:
       return {
         ...state,
         ...action.payload
       }
-
-
     case REMOVE_PERSON_FROM_FAVORITE:
-      return {
-        ...state,
-        ...action.payload
-      }
+      return omit(state,[action.payload])
 
     default:
       return state;
