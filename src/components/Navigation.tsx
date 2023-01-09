@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import UiButton from './UI/UiButton';
+import FavoriteComponent from './FavoriteComponent';
 
 const Navigation = () => {
 
@@ -12,7 +13,7 @@ const Navigation = () => {
           <li className='nav-item'><NavLink to="/" >Home</NavLink></li>
           <li className='nav-item' ><NavLink to="/people">People</NavLink></li>
         </ul>
-        <img className='img-star' src='../assets/img/star.png' alt='star' />
+        <Link to="/favorites"><FavoriteComponent /></Link>
       </nav>
     </>
   )
