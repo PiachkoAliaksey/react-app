@@ -27,7 +27,6 @@ const PeoplePage: React.FC<IView> = ({ setErrorApi }) => {
   const getResource = async (url: string) => {
     setLoading(true);
     const body = await getApiRes(url);
-    console.log(body);
     if (body) {
       const peopleList = body.results.map((element: IElementOfObject) => {
         const id = getIdOfPeople(element.url);
