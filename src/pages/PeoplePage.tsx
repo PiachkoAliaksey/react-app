@@ -28,6 +28,7 @@ const PeoplePage: React.FC<IView> = ({ setErrorApi }) => {
     setLoading(true);
     const body = await getApiRes(url);
     if (body) {
+      setErrorApi(false);
       const peopleList = body.results.map((element: IElementOfObject) => {
         const id = getIdOfPeople(element.url);
         const img = getPeopleImg(id);
@@ -39,9 +40,9 @@ const PeoplePage: React.FC<IView> = ({ setErrorApi }) => {
       }
       )
       setPrevPage(body.previous);
+      setErrorApi(false);
       setNextPage(body.next);
       setElement(peopleList);
-      setErrorApi(false);
       setLoading(false);
     } else {
       setErrorApi(true);
