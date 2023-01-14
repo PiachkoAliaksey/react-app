@@ -3,6 +3,8 @@ import HomePage from '../pages/HomePage';
 import NotFound from '../pages/NotFound';
 import PersonPage from '../pages/PersonPage';
 import FavoritePage from '../pages/FavoritePage';
+import SearchPage from '../pages/SearchPage';
+
 const routesConfig = [
   {
     path: '/',
@@ -15,6 +17,10 @@ const routesConfig = [
   {
     path: '/favorites',
     component: FavoritePage
+  },
+  {
+    path: '/search',
+    component: SearchPage
   },
   {
     path: '/people/:id',
