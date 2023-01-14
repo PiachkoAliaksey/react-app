@@ -43,7 +43,7 @@ const ChooseSide = () => {
 
   return (
     <div className='block-choose-theme'>
-      {elements.map((element) => <ChooseSideItem theme={element.theme} style={element.style} text={element.text} />)}
+      {elements.map((element) => <ChooseSideItem key = {element.text} theme={element.theme} style={element.style} text={element.text} />)}
     </div>
   )
 

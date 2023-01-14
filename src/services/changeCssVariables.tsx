@@ -1,6 +1,6 @@
-import theme_dark_side from '../assets/img/theme-dark-side.png';
-import theme_light_side from '../assets/img/theme-light-side.jpg';
-import theme_neutral_side from '../assets/img/space.png';
+import theme_dark_side from '.././assets/img/theme-dark-side.png';
+import theme_light_side from '.././assets/img/theme-light-side.jpg';
+import theme_neutral_side from '.././assets/img/space.png';
 
 export const changeCssVariables = (theme: string) => {
   const headerMainPage = document.querySelector('.header-main-page') as HTMLElement;
