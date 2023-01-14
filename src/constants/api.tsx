@@ -2,9 +2,14 @@ export const baseUrl = 'swapi.dev/api/';
 export const apiPeople = 'people';
 export const HTTPS = 'https://';
 export const HTTP = 'http://';
-export const rootPeople = `${HTTPS}${baseUrl}${apiPeople}`;
+export const apiParamSearch = '/?search='
 
-//https://starwars-visualguide.com/assets/img/characters/22.jpg
+
+export const rootPeople = `${HTTPS}${baseUrl}${apiPeople}`;
+export const rootParamSearch = `${HTTPS}${baseUrl}${apiPeople}${apiParamSearch}`
+
+
+
 const rootImg = 'https://starwars-visualguide.com/assets/img/';
 const rootImgPeople = 'characters';
 export const imgExt = '.jpg';
