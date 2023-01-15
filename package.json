@@ -1,7 +1,7 @@
 {
-  "name": "react-components",
+  "name": "react-app",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": "https://PiachkoAliaksey.github.io/react-app/dist/",
   "description": "react-components",
   "main": "dist/index.html",
   "scripts": {

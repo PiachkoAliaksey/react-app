@@ -7,7 +7,7 @@ import SearchPage from '../pages/SearchPage';
 
 const routesConfig = [
   {
-    path: '/',
+    path: '/react-app',
     component: HomePage
   },
   {

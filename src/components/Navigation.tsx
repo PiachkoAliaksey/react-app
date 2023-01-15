@@ -37,7 +37,7 @@ const Navigation = () => {
         <img className='img-header-icon' src={icon} alt='icon' />
         <h1>STAR WARS</h1>
         <ul className='navigation-list'>
-          <li className='nav-item'><NavLink className='link-item' to="/" >Home</NavLink></li>
+          <li className='nav-item'><NavLink className='link-item' to="/react-app" >Home</NavLink></li>
           <li className='nav-item' ><NavLink className='link-item' to="/people">People</NavLink></li>
           <li className='nav-item' ><NavLink className='link-item' to="/search">Search</NavLink></li>
         </ul>
