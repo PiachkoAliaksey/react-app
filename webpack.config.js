@@ -33,7 +33,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
   devServer: {
@@ -42,7 +42,8 @@ const config = {
     port: 3000,
     overlay: true,
     stats: 'errors-only',
-    clientLogLevel: 'none'
+    clientLogLevel: 'none',
+    historyApiFallback: true,
   },
 
   module: {

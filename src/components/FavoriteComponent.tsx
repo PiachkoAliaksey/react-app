@@ -1,6 +1,8 @@
 import React, { Component, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import star_img from '../assets/img/star.png'
+
 interface IRootState {
   [num: string]: { name: string, img: string }
 }
@@ -19,7 +21,7 @@ const FavoriteComponent = () => {
   })
 
   return (
-    <div className='block-of-favorite-page'><img className='img-star' src='../assets/img/star.png' alt='star' /> <div className='block-of-number-favorites'>{count}</div></div>
+    <div className='block-of-favorite-page'><img className='img-star' src={star_img} alt='star' /> <div className='block-of-number-favorites'>{count}</div></div>
   )
 
 }

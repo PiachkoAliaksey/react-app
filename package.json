@@ -1,14 +1,15 @@
 {
   "name": "react-components",
   "version": "1.0.0",
-  "homepage": "https://PiachkoAliaksey.github.io/dist/",
+  "homepage": ".",
   "description": "react-components",
-  "main": "index.tsx",
+  "main": "dist/index.html",
   "scripts": {
     "test": "npm run eslint",
     "eslint": "eslint src/**/*.js",
     "dev": "webpack-dev-server --history-api-fallback --inline --open",
     "build": "npm run clear -s && webpack --progress",
+    "aaa":"webpack-dev-server --mode production",
     "clear": "del-cli dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

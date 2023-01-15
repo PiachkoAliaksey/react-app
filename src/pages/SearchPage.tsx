@@ -5,6 +5,7 @@ import { rootParamSearch } from '../constants/api';
 import { withErrorApi } from '../hoc-helpers/withErrorApi';
 import { getIdOfPeople, getPeopleImg } from '../utils/getId';
 import SearchPageInfo from '../components/SearchPageInfo';
+import img_cross from '../assets/img/close.png';
 
 interface IView {
   setErrorApi: React.Dispatch<React.SetStateAction<boolean>>,
@@ -72,7 +73,7 @@ const SearchPage: React.FC<IView> = ({ setErrorApi }) => {
       <h2 className='header-search-page'>Search Page</h2>
       <div className='block-input-element'>
         <input className='input-element-search-page' type='text' value={inputValue} onChange={handleInputChange} placeholder='Input charter`s name...' />
-        <img onClick={()=> setInputValue('')} className={`img-cross ${!inputValue&&'img-cross-disabled'}`} src='../assets/img/close.png' alt = 'cross'/>
+        <img onClick={()=> setInputValue('')} className={`img-cross ${!inputValue&&'img-cross-disabled'}`} src={img_cross} alt = 'cross'/>
       </div>
       <SearchPageInfo list={personages} />
     </div>
