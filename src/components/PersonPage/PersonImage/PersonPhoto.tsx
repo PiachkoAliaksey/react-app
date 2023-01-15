@@ -26,7 +26,7 @@ const PersonPhoto: React.FC<IPersonPhoto> = ({ personFavorite, setPersonFavorite
   return (
     <div className='block-of-image-person'>
       <img className='imgOfPerson' src={imgPerson} alt={personName} />
-      <button className='btn-add-to-favorite' onClick={dispatchFavorite}>{personFavorite ? <img className='img-favorite' src='../../assets/img/favorite-fill.svg' alt='star-active' /> : <img className='img-favorite' src='../../assets/img/favorite.svg' alt='star-inactive' />}</button>
+      <button className='btn-add-to-favorite' onClick={dispatchFavorite}>{personFavorite ? <div className='img-favorite-active'></div> : <div className='img-favorite-inactive'></div>}</button>
     </div>
   )
 

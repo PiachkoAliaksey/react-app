@@ -73,7 +73,7 @@ const SearchPage: React.FC<IView> = ({ setErrorApi }) => {
       <h2 className='header-search-page'>Search Page</h2>
       <div className='block-input-element'>
         <input className='input-element-search-page' type='text' value={inputValue} onChange={handleInputChange} placeholder='Input charter`s name...' />
-        <img onClick={()=> setInputValue('')} className={`img-cross ${!inputValue&&'img-cross-disabled'}`} src={img_cross} alt = 'cross'/>
+        <p onClick={()=> setInputValue('')} className={`img-cross ${!inputValue&&'img-cross-disabled'}`}>&times;</p>
       </div>
       <SearchPageInfo list={personages} />
     </div>
